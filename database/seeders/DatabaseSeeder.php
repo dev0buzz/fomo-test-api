@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Customer;
+use App\Models\Order;
+use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -19,5 +21,7 @@ class DatabaseSeeder extends Seeder
     {
         Product::factory(20)->create();
         Customer::factory(10)->create();
+        Order::factory(20)->create();
+        OrderItem::factory(3)->create();
     }
 }
