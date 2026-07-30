@@ -6,6 +6,12 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function(){
+    return [
+        'version' => '0.0.1',
+    ];
+});
+
 Route::apiResource('products', ProductController::class);
 Route::apiResource('customers', CustomerController::class);
 Route::apiResource('orders', OrderController::class);
